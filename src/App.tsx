@@ -1,7 +1,8 @@
 import React from "react";
+import { DownloadSampleCsvFile } from "./components/downloadSampleCsvFile";
 
 const App: React.FC = () => {
-  return <div>Hello World</div>;
+  return <DownloadSampleCsvFile />;
 };
 
 export default App;
