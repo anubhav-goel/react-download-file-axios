@@ -27,7 +27,7 @@ export const DownloadSampleCsvFile: React.FC = () => {
   };
 
   const downloadSampleCsvFile = () => {
-    // throw new Error("hello");
+    // throw new Error("uncomment this line to mock failure of API");
     return axios.get(
       "https://raw.githubusercontent.com/anubhav-goel/react-download-file-axios/main/sampleFiles/csv-sample.csv",
       { responseType: "blob" }
