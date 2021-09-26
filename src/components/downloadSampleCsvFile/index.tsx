@@ -29,7 +29,7 @@ export const DownloadSampleCsvFile: React.FC = () => {
   const downloadSampleCsvFile = () => {
     // throw new Error("hello");
     return axios.get(
-      "https://raw.githubusercontent.com/anubhav-goel/react-download-file-axios/main/csv-sample.csv"
+      "https://raw.githubusercontent.com/anubhav-goel/react-download-file-axios/main/sampleFiles/csv-sample.csv"
     );
   };
 
