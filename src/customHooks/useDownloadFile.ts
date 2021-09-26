@@ -2,7 +2,7 @@ import { AxiosResponse } from "axios";
 import { useRef, useState } from "react";
 
 interface DownloadFileProps {
-  readonly asyncFunction: () => Promise<AxiosResponse>;
+  readonly asyncFunction: () => Promise<AxiosResponse<Blob>>;
   readonly preDownloading: () => void;
   readonly postDownloading: () => void;
   readonly onError: () => void;
