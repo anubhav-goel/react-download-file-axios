@@ -36,6 +36,7 @@ export const useDownloadFile = ({
       setFileName(getFileName());
       fileRef.current?.click();
       postDownloading();
+      URL.revokeObjectURL(url);
     } catch (error) {
       onError();
     }
