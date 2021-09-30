@@ -34,8 +34,8 @@ export const DownloadSampleCsvFile: React.FC = () => {
     );
   };
 
-  const { fileRef, fileUrl, downloadFile, fileName } = useDownloadFile({
-    asyncFunction: downloadSampleCsvFile,
+  const { ref, url, download, name } = useDownloadFile({
+    apiDefinition: downloadSampleCsvFile,
     preDownloading,
     postDownloading,
     onError: onErrorDownloadFile,
@@ -47,12 +47,8 @@ export const DownloadSampleCsvFile: React.FC = () => {
       <Alert variant="danger" show={showAlert}>
         Something went wrong. Please try again!
       </Alert>
-      <a href={fileUrl} download={fileName} className="hidden" ref={fileRef} />
-      <Button
-        label="Download"
-        buttonState={buttonState}
-        onClick={downloadFile}
-      />
+      <a href={url} download={name} className="hidden" ref={ref} />
+      <Button label="Download" buttonState={buttonState} onClick={download} />
     </Container>
   );
 };
