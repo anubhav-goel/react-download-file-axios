@@ -30,7 +30,14 @@ export const DownloadSampleCsvFile: React.FC = () => {
     // throw new Error("uncomment this line to mock failure of API");
     return axios.get(
       "https://raw.githubusercontent.com/anubhav-goel/react-download-file-axios/main/sampleFiles/csv-sample.csv",
-      { responseType: "blob" }
+      {
+        responseType: "blob",
+        /* 
+        headers: {
+          Authorization: "Bearer <token>", // add authentication information as required by the backend APIs.
+        },
+         */
+      }
     );
   };
 
